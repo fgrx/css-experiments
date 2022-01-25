@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <style>
+      body {
+        /* Définition de la variable avec -- */
+        --titleColor: red;
+      }
+
+      h1,
+      h2 {
+        /* Utilisation de la variable avec var et ensuite on a la valeur par défaut */
+        color: var(--titleColor, pink);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Les variables</h1>
+
+    <div class="bloc">
+      <h2>Sous titre</h2>
+      <p>Hello</p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit asperiores
+      illum quo earum aperiam tempora expedita vel adipisci velit tempore eum
+      numquam nesciunt iusto neque animi eos, at accusantium est?
+    </div>
+  </body>
+</html>

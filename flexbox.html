@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+
+      .container {
+        border: 1px #ccc solid;
+        display: flex;
+        flex-wrap: nowrap;
+
+        /* align à droite */
+        /* justify-content: flex-end; */
+
+        /* Align au centre */
+        /* justify-content: center; */
+
+        /* Avec de l'espace autour */
+        justify-content: space-between;
+
+        /* Aligner au centre */
+        align-items: center;
+        height: 400px;
+      }
+
+      .element {
+        border: 1px solid black;
+        padding: 1em;
+        margin: 1em;
+        width: 200px;
+      }
+
+      /* Deuxieme bloc  */
+
+      .container-avec-taille {
+        border: 1px #ccc solid;
+        display: flex;
+      }
+
+      .element-bis {
+        border: 1px solid black;
+        padding: 1em;
+        margin: 1em;
+      }
+
+      .element-bis:nth-child(1) {
+        flex: 1;
+      }
+      .element-bis:nth-child(2) {
+        flex: 1;
+      }
+      .element-bis:nth-child(3) {
+        flex: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tests Flexbox</h1>
+
+    <div class="container">
+      <div class="element">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde assumenda
+        et repellendus sed ratione, pariatur voluptatem expedita distinctio
+        velit! Cum, veniam sed? Cum placeat saepe molestias voluptatum explicabo
+        debitis delectus.
+      </div>
+      <div class="element">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+        quibusdam dolore eius nisi laborum nostrum ipsum est, dicta hic enim
+        nemo quidem accusantium pariatur ipsam error fugiat magnam quo
+        laboriosam.
+      </div>
+      <div class="element">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
+        accusamus sit? Praesentium accusantium voluptas debitis quas enim hic
+        tempore, dicta modi. Ducimus, ipsum? Asperiores inventore accusantium
+        suscipit maxime maiores est?
+      </div>
+    </div>
+
+    <div class="container-avec-taille">
+      <div class="element-bis">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde assumenda
+        et repellendus sed ratione, pariatur voluptatem expedita distinctio
+        velit! Cum, veniam sed? Cum placeat saepe molestias voluptatum explicabo
+        debitis delectus.
+      </div>
+      <div class="element-bis">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+        quibusdam dolore eius nisi laborum nostrum ipsum est, dicta hic enim
+        nemo quidem accusantium pariatur ipsam error fugiat magnam quo
+        laboriosam.
+      </div>
+      <div class="element-bis">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
+        accusamus sit? Praesentium accusantium voluptas debitis quas enim hic
+        tempore, dicta modi. Ducimus, ipsum? Asperiores inventore accusantium
+        suscipit maxime maiores est?
+      </div>
+    </div>
+  </body>
+</html>

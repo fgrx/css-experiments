@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grids</title>
+
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 5%;
+      }
+
+      .element {
+        border: 1px solid black;
+        width: 100%;
+        padding: 1em;
+      }
+
+      /* Mise en forme façon siteweb */
+
+      .container2 {
+        display: grid;
+
+        /* grid-template-columns: 20% 80%; */
+        /* version relative :  */
+        grid-template-columns: 1fr 5fr;
+
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-gap: 5%;
+        /* renseigne le placement des blocs nommé avec grid area */
+        grid-template-areas: "menu header" "menu content" "menu foot";
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      nav {
+        grid-area: menu;
+        border: 1px solid grey;
+      }
+
+      article {
+        grid-area: content;
+        border: 1px solid grey;
+      }
+
+      footer {
+        grid-area: foot;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grids</h1>
+    <div class="container">
+      <div class="element">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
+        excepturi? Excepturi fugit autem at tempora ipsa culpa nisi nam
+        voluptates voluptatibus esse eum nesciunt quidem facere, odit aperiam
+        dolore pariatur.
+      </div>
+      <div class="element">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quod
+        cupiditate eum impedit quo veritatis odit, consequatur fugiat quae
+        aspernatur error? Nemo soluta dolores atque in quae iusto magnam
+        consequatur.
+      </div>
+      <div class="element">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum tempora
+        ad enim atque similique praesentium voluptas, dolores aspernatur,
+        inventore sapiente animi ab nemo necessitatibus aperiam. A architecto
+        laudantium odit libero.
+      </div>
+    </div>
+
+    <div class="container2">
+      <nav>
+        <ul>
+          <li>menu1</li>
+          <li>menu2</li>
+          <li>menu3</li>
+          <li>menu4</li>
+        </ul>
+      </nav>
+      <header>
+        <h2>Titre du site</h2>
+      </header>
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
+        consectetur, veniam nulla ad minima magni, eveniet nesciunt, excepturi
+        velit et ullam illum! Obcaecati deserunt unde hic mollitia consequuntur
+        maxime! Corporis.
+      </article>
+      <footer>pied de page</footer>
+    </div>
+  </body>
+</html>
